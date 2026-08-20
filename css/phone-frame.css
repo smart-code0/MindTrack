@@ -42,3 +42,19 @@ body > .profile {
     box-shadow: none;
   }
 }
+
+/* Keep the bottom navigation inside the visible phone frame while its
+   contents scroll.  This also overrides older per-page absolute/fixed rules
+   that positioned the navigation relative to the browser window. */
+.phone-frame .bottom-nav,
+body > .phone .bottom-nav,
+body > main.app .bottom-nav,
+body > .app > .bottom-nav {
+  position: sticky;
+  right: auto;
+  bottom: 0;
+  left: auto;
+  z-index: 10;
+  margin: auto 0 0;
+  flex-shrink: 0;
+}

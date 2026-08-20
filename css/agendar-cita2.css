@@ -47,7 +47,26 @@ body {
 
 .content {
   flex: 1;
-  padding: 18px 20px 0;
+  position: relative;
+  padding: 54px 20px 0;
+}
+
+.back-button {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.back-button iconify-icon {
+  font-size: 22px;
 }
 
 .welcome-screen {
@@ -320,8 +339,36 @@ body {
 
 
 
-.nav-link.active {
-  color: #4f70ff;
+.bottom-nav {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+  border-top: 1px solid #d8d8d8;
+  flex-shrink: 0;
+}
+
+.bottom-nav .nav-link,
+.bottom-nav .nav-link.active {
+  color: #777;
+  font-size: 28px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.bottom-nav .nav-link:hover {
+  color: #5B84EA;
+}
+
+.bottom-nav .nav-link iconify-icon {
+  display: block;
+  font-size: 28px;
+  line-height: 1;
 }
 
 @media (max-width: 360px) {
