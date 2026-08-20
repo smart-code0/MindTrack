@@ -21,6 +21,15 @@ body > .profile {
   box-shadow: 0 14px 34px rgba(20, 32, 62, .18);
   overflow-x: hidden;
   overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.phone-frame::-webkit-scrollbar,
+body > .phone::-webkit-scrollbar,
+body > .app::-webkit-scrollbar,
+body > .profile::-webkit-scrollbar {
+  display: none;
 }
 
 @media (max-width: 479px) {
