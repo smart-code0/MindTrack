@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindTrack | New citation</title>
+  <link rel="stylesheet" href="css/agendar-cita2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div></div>
+      <img src="img/MindTrack-Logo.png" alt="MindTrack" class="app-logo">
+      <a href="settings.html" class="top-icon"><iconify-icon icon="solar:user-outline"></iconify-icon></a>
+    </header>
+
+    <main class="content">
+      <section class="welcome-screen">
+        <h1>New citation</h1>
+        <p>Fill in the appointment details</p>
+      </section>
+
+      <section class="card schedule-card">
+        <div class="type-section">
+          <span class="section-title">Appointment type</span>
+          <div class="type-grid">
+            <button class="type-button active" type="button">
+              <iconify-icon icon="mdi:brain" class="type-icon"></iconify-icon>
+              <span>Psychologist</span>
+            </button>
+            <button class="type-button" type="button">
+              <iconify-icon icon="mdi:stethoscope" class="type-icon"></iconify-icon>
+              <span>Psychiatrist</span>
+            </button>
+            <button class="type-button" type="button">
+              <iconify-icon icon="mdi:doctor" class="type-icon"></iconify-icon>
+              <span>Doctor</span>
+            </button>
+            <button class="type-button" type="button">
+              <iconify-icon icon="mdi:dumbbell" class="type-icon"></iconify-icon>
+              <span>Exercise</span>
+            </button>
+            <button class="type-button" type="button">
+              <iconify-icon icon="mdi:clipboard-list" class="type-icon"></iconify-icon>
+              <span>Tracing</span>
+            </button>
+            <button class="type-button" type="button">
+              <iconify-icon icon="mdi:calendar-plus" class="type-icon"></iconify-icon>
+              <span>Other</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <div class="input-row">
+            <div class="input-group">
+              <label for="date">Date *</label>
+              <input id="date" type="text" placeholder="30/06/2026" />
+            </div>
+            <div class="input-group">
+              <label for="start-time">Start time</label>
+              <input id="start-time" type="text" placeholder="10:00 a.m." />
+            </div>
+          </div>
+
+          <div class="input-group full-width">
+            <label for="end-time">End time</label>
+            <input id="end-time" type="text" placeholder="11:00 a.m." />
+          </div>
+
+          <div class="input-group full-width">
+            <label for="place">Place</label>
+            <input id="place" type="text" placeholder="Office 204" />
+          </div>
+
+          <div class="reminder-card">
+            <div class="reminder-labels">
+              <strong>Activate reminder</strong>
+              <span>Get notified before the appointment</span>
+            </div>
+            <button class="toggle-switch active" type="button" aria-pressed="true">
+              <span class="toggle-knob"></span>
+            </button>
+          </div>
+
+          <button class="submit-button" type="button">Create appointment</button>
+        </div>
+      </section>
+
+    </main>
+
+    <nav class="bottom-nav">
+      <a href="home.html" class="nav-link"><iconify-icon icon="fa7-regular:home"></iconify-icon></a>
+      <a href="estadisticas.html" class="nav-link"><iconify-icon icon="material-symbols-light:bar-chart-4-bars"></iconify-icon></a>
+      <a href="agendar-cita2.html" class="nav-link active"><iconify-icon icon="griddy-icons:calendar"></iconify-icon></a>
+    </nav>
+  </div>
+
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  <script>
+    document.querySelectorAll('.type-button').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.type-button').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+
+    const toggle = document.querySelector('.toggle-switch');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
+      toggle.setAttribute('aria-pressed', toggle.classList.contains('active'));
+    });
+
+    document.querySelector('.submit-button').addEventListener('click', () => {
+      const selectedType = document.querySelector('.type-button.active span').textContent;
+      const dateValue = document.getElementById('date').value || '30/06/2026';
+      const startTime = document.getElementById('start-time').value || '10:00 a.m.';
+      const endTime = document.getElementById('end-time').value || '11:00 a.m.';
+      const place = document.getElementById('place').value || 'Office 204';
+      const reminderOn = toggle.classList.contains('active');
+
+      const appointment = {
+        type: selectedType,
+        date: dateValue,
+        startTime,
+        endTime,
+        place,
+        reminder: reminderOn,
+        doctor: 'Dr. William Vanegas'
+      };
+
+      const saved = JSON.parse(localStorage.getItem('mindtrackAppointments') || '[]');
+      saved.push(appointment);
+      localStorage.setItem('mindtrackAppointments', JSON.stringify(saved));
+
+      window.location.href = 'agendar-cita.html';
+    });
+  </script>
+</body>
+</html>

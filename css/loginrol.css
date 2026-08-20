@@ -1,0 +1,343 @@
+/* ==========================================
+                RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:#ECECEC;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+
+}
+
+
+/* ==========================================
+                APP
+========================================== */
+
+.phone{
+
+    width:390px;
+    height:844px;
+
+    background:#EEF3FF;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+
+/* ==========================================
+            STATUS BAR
+========================================== */
+
+.status-bar{
+
+    width:100%;
+    height:42px;
+
+    background:#fff;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 18px;
+
+    font-size:14px;
+    font-weight:600;
+
+    color:#222;
+
+}
+
+.status-icons{
+
+    display:flex;
+    gap:8px;
+
+    font-size:17px;
+
+}
+
+
+/* ==========================================
+                HEADER
+========================================== */
+
+header{
+
+    width:100%;
+    height:82px;
+
+    background:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+header img{
+
+    width:205px;
+
+}
+
+.MindTrack{
+
+    width: 125px;
+    height: auto;
+
+}
+
+
+/* ==========================================
+                MAIN
+========================================== */
+
+main{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding-top:24px;
+
+}
+
+
+/* ==========================================
+                TITULO
+========================================== */
+
+main h1{
+
+    color:#243A9F;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+}
+
+
+/* ==========================================
+                SUBTITULO
+========================================== */
+
+.subtitle{
+
+    color:#9A9A9A;
+
+    font-size:15px;
+
+    text-align:center;
+
+    line-height:1.45;
+
+    margin-bottom:55px;
+
+}
+
+
+/* ==========================================
+                TARJETAS
+========================================== */
+
+.role-card{
+
+    width:325px;
+
+    height:84px;
+
+    background:#fff;
+
+    border:1px solid #E4E4E4;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:14px 18px;
+
+    margin-bottom:26px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+/* ==========================================
+                ICONO
+========================================== */
+
+.role-icon{
+
+    width:36px;
+    height:36px;
+    margin-right: 14px;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    flex-shrink:0;
+
+    margin-right:16px;
+
+    color:#7A73D8;
+
+}
+
+.role-icon iconify-icon{
+
+    font-size:22px;
+
+}
+
+
+/* ==========================================
+              INFORMACIÓN
+========================================== */
+
+.role-info{
+
+    flex:1;
+
+}
+
+.role-info h3{
+
+    color:#6A43B8;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    margin-bottom:8px;
+
+}
+
+.role-info p{
+
+    color:#444;
+
+    font-size:11px;
+
+    line-height:1.25;
+
+}
+
+
+/* ==========================================
+          TARJETA SELECCIONADA
+========================================== */
+
+.role-card.selected{
+
+    border:1.5px solid #5F8FFF;
+
+    background:#F7F9FF;
+
+    box-shadow:0 6px 16px rgba(95,143,255,.15);
+
+}
+
+.role-card.selected .role-icon{
+
+    color:#4F73FF;
+
+}
+
+.role-card.selected .role-info h3{
+
+    color:#4F73FF;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================
+                HOVER
+========================================== */
+
+.role-card:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+}
+
+
+/* ==========================================
+              BOTÓN CONTINUE
+========================================== */
+
+.continue-btn{
+
+    width:272px;
+
+    height:44px;
+
+    margin-top:118px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:linear-gradient(90deg,#5F92FF,#9B77DA);
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:400;
+
+    cursor:pointer;
+
+    box-shadow:0 5px 12px rgba(95,146,255,.30);
+
+    transition:.25s;
+
+}
+.continue-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.continue-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 20px rgba(95,146,255,.35);
+
+}
+
+.continue-btn:active{
+
+    transform:translateY(0);
+
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindTrack | Tell us more</title>
+  <link rel="stylesheet" href="css/style1.css">
+</head>
+
+
+<body>
+ 
+  <div class="phone-frame">
+
+    
+ 
+    <div class="status-bar">
+      <span class="status-time">12:01</span>
+      <div class="status-icons">
+        <span><iconify-icon icon="pinhead:phone-bars"></iconify-icon></span>
+        <span><iconify-icon icon="material-symbols:wifi"></iconify-icon></span>
+        <span><iconify-icon icon="ic:baseline-battery-80"></iconify-icon></span>
+      </div>
+    </div>
+ 
+    <!-- Barra de navegación superior de la app -->
+    <header class="app-topbar">
+      <div class="app-topbar__brand">
+        <img src="img/MindTrack-Logo.png" class="logo">
+      </div>
+      <button class="app-topbar__profile" aria-label="Perfil"><iconify-icon icon="solar:user-outline" class="usuario"></iconify-icon></button>
+    </header>
+ 
+    <!-- Pantalla: Tell us more (registro de journal) -->
+    <main class="screen journal-screen">
+ 
+    <div class="back-button">
+    <a href="Reporte02.html">
+        <iconify-icon icon="material-symbols-light:arrow-back-rounded" class="arrow"></iconify-icon>
+    </a>  
+    </div>
+      <h1 class="journal-title">Tell us more</h1>
+      <p class="journal-subtitle">What happened today?</p>
+ 
+      <div class="journal-textarea-wrap">
+        <textarea class="journal-textarea" maxlength="300" placeholder="Today I felt more relaxed because I spent time with my family..."></textarea>
+        <div class="journal-textarea__footer">
+          <span class="char-count">0/300</span>
+          <button type="button" class="mic-btn" aria-label="Dictar por voz"><iconify-icon icon="material-symbols-light:mic"></iconify-icon></button>
+        </div>
+      </div>
+ 
+      <footer class="footer">
+
+            <a href="Reporte04.html"><button class="continue">
+                Continue
+            </button></a>
+
+            <span class="page">
+                3/5
+            </span>
+
+            <nav class="bottom-nav">
+
+                <a href="home.html">
+                <iconify-icon icon="fa7-regular:home"></iconify-icon>
+                </a>
+                <a href="estadisticas.html">
+                <iconify-icon icon="material-symbols-light:bar-chart-4-bars"></iconify-icon>
+                </a>
+
+                <a href="agendar-cita.html">
+                    <iconify-icon icon="griddy-icons:calendar"></iconify-icon>
+                </a>
+            </nav>
+
+        </footer>
+ 
+  </div>
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+</body>
+</html>

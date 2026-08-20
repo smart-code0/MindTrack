@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindTrack | Agendar cita</title>
+  <link rel="stylesheet" href="css/agendar-cita.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="phone-frame">
+    <div class="status-bar">
+      <span class="status-time">12:01</span>
+      <div class="status-icons">
+        <span><iconify-icon icon="ph:signal-high" width="16"></iconify-icon></span>
+        <span><iconify-icon icon="material-symbols:wifi" width="16"></iconify-icon></span>
+        <span><iconify-icon icon="ic:baseline-battery-80" width="16"></iconify-icon></span>
+      </div>
+    </div>
+
+    <div class="app-bar">
+      <div></div>
+      <img src="img/MindTrack-Logo.png" alt="MindTrack" class="logo">
+      <a href="settings.html" class="icon-button"><iconify-icon icon="solar:user-outline"></iconify-icon></a>
+    </div>
+
+    <main class="content">
+      <section class="page-header">
+        <h1>Schedule an appointment</h1>
+        <p>Choose the day</p>
+      </section>
+
+      <section class="card calendar-card">
+        <div class="calendar-header">
+          <button class="nav-btn"><iconify-icon icon="material-symbols:chevron-left"></iconify-icon></button>
+          <p>July 2026</p>
+          <button class="nav-btn"><iconify-icon icon="material-symbols:chevron-right"></iconify-icon></button>
+        </div>
+
+        <div class="calendar-grid">
+          <span class="weekday">Su</span>
+          <span class="weekday">Mo</span>
+          <span class="weekday">Tu</span>
+          <span class="weekday">We</span>
+          <span class="weekday">Th</span>
+          <span class="weekday">Fr</span>
+          <span class="weekday">Sa</span>
+
+          <span class="day day--empty">28</span>
+          <span class="day day--empty">29</span>
+          <span class="day day--empty">30</span>
+          <span class="day day--empty">1</span>
+          <span class="day day--empty">2</span>
+          <span class="day day--empty">3</span>
+          <span class="day day--empty">4</span>
+
+          <span class="day day--empty">5</span>
+          <span class="day day--empty">6</span>
+          <span class="day day--empty">7</span>
+          <span class="day day--empty">8</span>
+          <span class="day day--selected">9</span>
+          <span class="day">10</span>
+          <span class="day">11</span>
+
+          <span class="day">12</span>
+          <span class="day day--marked">13</span>
+          <span class="day">14</span>
+          <span class="day">15</span>
+          <span class="day">16</span>
+          <span class="day">17</span>
+          <span class="day">18</span>
+
+          <span class="day">19</span>
+          <span class="day">20</span>
+          <span class="day">21</span>
+          <span class="day">22</span>
+          <span class="day">23</span>
+          <span class="day">24</span>
+          <span class="day">25</span>
+
+          <span class="day">26</span>
+          <span class="day">27</span>
+          <span class="day">28</span>
+          <span class="day">29</span>
+          <span class="day">30</span>
+          <span class="day">31</span>
+          <span class="day day--empty">1</span>
+        </div>
+      </section>
+
+      <section class="section-label" id="selectedDateLabel">Monday, 9 July</section>
+
+      <section class="card appointments-list" id="appointmentsList">
+        <div class="empty-state">
+          <div class="empty-icon"><iconify-icon icon="fa6-solid:calendar-days"></iconify-icon></div>
+          <p id="noAppointmentsText">There are no appointments today.</p>
+          <a href="agendar-cita2.html" class="add-link">+ Add citation</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bottom-nav">
+      <a href="home.html" class="nav-link active"><iconify-icon icon="fa7-regular:home"></iconify-icon></a>
+      <a href="estadisticas.html" class="nav-link"><iconify-icon icon="material-symbols-light:bar-chart-4-bars"></iconify-icon></a>
+      <a href="agendar-cita.html" class="nav-link"><iconify-icon icon="griddy-icons:calendar"></iconify-icon></a>
+    </footer>
+  </div>
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  <script>
+    function formatDateLabel(dateString) {
+      const [day, month, year] = dateString.split('/').map(Number);
+      if (!day || !month || !year) return dateString;
+      const date = new Date(year, month - 1, day);
+      return date.toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long' });
+    }
+
+    function renderAppointments() {
+      const appointments = JSON.parse(localStorage.getItem('mindtrackAppointments') || '[]');
+      const list = document.getElementById('appointmentsList');
+      const dateLabel = document.getElementById('selectedDateLabel');
+      const noText = document.getElementById('noAppointmentsText');
+
+      if (!appointments.length) {
+        list.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-icon"><iconify-icon icon="fa6-solid:calendar-days"></iconify-icon></div>
+            <p id="noAppointmentsText">There are no appointments today.</p>
+            <a href="agendar-cita2.html" class="add-link">+ Add citation</a>
+          </div>`;
+        dateLabel.textContent = 'No appointments yet';
+        return;
+      }
+
+      list.innerHTML = '';
+      const latest = appointments[appointments.length - 1];
+      dateLabel.textContent = formatDateLabel(latest.date);
+
+      appointments.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = 'appointment-card';
+        card.innerHTML = `
+          <div class="appointment-top">
+            <div>
+              <p class="appointment-title">Session with ${item.type === 'Other' ? item.type : item.type === 'Tracing' ? item.type : item.type === 'Exercise' ? item.type : item.type}</p>
+              <p class="appointment-subtitle">${item.reminder ? 'Active reminder' : 'Reminder off'}</p>
+            </div>
+            <div class="appointment-actions">
+              <button class="action-button action-edit" type="button"><iconify-icon icon="ic:round-edit"></iconify-icon></button>
+              <button class="action-button action-delete" type="button" data-index="${index}"><iconify-icon icon="ic:round-close"></iconify-icon></button>
+            </div>
+          </div>
+          <div class="appointment-info-row">
+            <div class="appointment-info-item"><iconify-icon icon="material-symbols:watch-later" class="info-icon"></iconify-icon><span>${item.startTime} - ${item.endTime}</span></div>
+            <div class="appointment-info-item"><iconify-icon icon="mdi:account" class="info-icon"></iconify-icon><span>${item.doctor}</span></div>
+            <div class="appointment-info-item"><iconify-icon icon="mdi:map-marker" class="info-icon"></iconify-icon><span>${item.place}</span></div>
+          </div>
+        `;
+
+        card.querySelector('.action-delete').addEventListener('click', event => {
+          const removeIndex = Number(event.currentTarget.dataset.index);
+          const filtered = appointments.filter((_, i) => i !== removeIndex);
+          localStorage.setItem('mindtrackAppointments', JSON.stringify(filtered));
+          renderAppointments();
+        });
+
+        list.appendChild(card);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', renderAppointments);
+  </script>
+</body>
+</html>
