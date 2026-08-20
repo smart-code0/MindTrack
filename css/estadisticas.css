@@ -199,7 +199,7 @@ body {
 
     background-color: #f3f6fc;
 
-    padding: 32px 20px 40px;
+    padding: 32px 20px 110px;
 
     display: flex;
     flex-direction: column;
@@ -964,67 +964,65 @@ body {
     color: #8588a1;
 }
 
+/* =========================================
+   FOOTER
+========================================= */
 
 /* =========================================
    FOOTER
 ========================================= */
 
-.bottom-nav {
+.footer {
+    position: sticky;
+    bottom: 0;
+
     width: 100%;
+    max-width: 395px;
 
-    height: 65px;
+    height: 70px;
 
-    background-color: #ffffff;
+    margin-top: -70px;
 
-    border-top: 1px solid #d6d6d6;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-around;
-
-    padding: 0 20px;
+    z-index: 1000;
 
     flex-shrink: 0;
 }
 
 
-.bottom-nav__item {
-    width: 40px;
-    height: 40px;
+.bottom-nav {
+    width: 100%;
+    height: 70px;
 
-    padding: 0;
-
-    background: none;
-
-    border: none;
-
-    color: #666666;
-
-    cursor: pointer;
-
-    font-size: 24px;
+    background-color: #ffffff;
 
     display: flex;
-
+    justify-content: space-around;
     align-items: center;
 
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.08);
+
+    border-radius: 0 0 25px 25px;
+}
+
+
+.bottom-nav a {
+    text-decoration: none;
+
+    color: #777777;
+
+    font-size: 28px;
+
+    display: flex;
+    align-items: center;
     justify-content: center;
 
-    opacity: 0.55;
+    transition: 0.3s;
 }
 
 
-.bottom-nav__item--active {
-    opacity: 1;
+.bottom-nav a:hover {
+    color: #5B84EA;
 }
-
-
-.bottom-nav__item iconify-icon {
-    font-size: 25px;
-}
-
 
 /* =========================================
    RESPONSIVE
