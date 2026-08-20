@@ -2,5 +2,4 @@
 s
 hola
 
-version castro
 
