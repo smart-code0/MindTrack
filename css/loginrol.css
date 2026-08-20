@@ -321,12 +321,6 @@ main h1{
     transition:.25s;
 
 }
-.continue-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
 
 .continue-btn:hover{
 

@@ -9,6 +9,7 @@
     <title>MindTrack</title>
 
     <link rel="stylesheet" href="css/loginrol.css">
+    <link rel="stylesheet" href="css/status-bar.css">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -24,13 +25,13 @@
 
         <div class="status-bar">
 
-            <span>12:01</span>
+            <span class="status-time">12:01</span>
 
             <div class="status-icons">
 
-                <iconify-icon icon="mdi:signal"></iconify-icon>
-                <iconify-icon icon="mdi:wifi"></iconify-icon>
-                <iconify-icon icon="mdi:battery"></iconify-icon>
+                <span><iconify-icon icon="pinhead:phone-bars"></iconify-icon></span>
+                <span><iconify-icon icon="material-symbols:wifi"></iconify-icon></span>
+                <span><iconify-icon icon="ic:baseline-battery-80"></iconify-icon></span>
 
             </div>
 
@@ -108,9 +109,11 @@
 
             </div>
 
-           <a href="home.html" class="continue-btn">
-            Continue
-            </a>
+            <button class="continue-btn">
+
+                Continue
+
+            </button>
 
         </main>
 

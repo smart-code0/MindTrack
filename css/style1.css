@@ -110,6 +110,32 @@ body {
 /* =========================================================
    Tarjeta blanca del formulario (Login / Signup)
    ========================================================= */
+.login-screen,
+.signup-screen {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-screen .hero-panel,
+.signup-screen .hero-panel {
+  flex-shrink: 0;
+}
+
+.login-screen .auth-form {
+  height: 100%;
+}
+
+.signup-screen .form-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-screen .btn-primary--top-margin {
+  margin-top: auto;
+}
+
 .form-card {
   background-color: #ffffff;
   border-radius: 28px 28px 0 0;
@@ -254,7 +280,8 @@ body {
 /* ---------- Pie con enlace a registro ---------- */
 .signup-hint {
   text-align: center;
-  margin-top: 22px;
+  margin-top: auto;
+  padding-top: 22px;
   font-size: 13px;
   color: #8b99c8;
 }
