@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindTrack</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/status-bar.css">
+
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app">
+
+    <div class="phone">
+
+        <div class="status-bar">
+        <span class="status-time">12:01</span>
+
+        <div class="status-icons">
+            <span>
+                <iconify-icon icon="pinhead:phone-bars"></iconify-icon>
+            </span>
+
+            <span>
+                <iconify-icon icon="material-symbols:wifi"></iconify-icon>
+            </span>
+
+            <span>
+                <iconify-icon icon="ic:baseline-battery-80"></iconify-icon>
+            </span>
+        </div>
+    </div>
+    
+
+    <!-- Header -->
+    <header>
+    <div></div>
+
+    <img src="img/MindTrack-Logo.png" alt="Logo de MindTrack" class="imagen">
+
+    <a href="settings.html"><iconify-icon icon="solar:user-outline" class="usuario"></iconify-icon></a>
+    </header>
+
+
+    <!-- Saludo -->
+    <section class="welcome">
+        <h1>Hi, Williams!</h1>
+        <p>Tuesday, 24 February 2026</p>
+    </section>
+
+    <!-- Mood -->
+    <section class="card mood">
+
+        <h3>How are you feeling today?</h3>
+
+        <div class="moods">
+
+            <div class="item">
+                <iconify-icon icon="garden:face-very-happy-stroke-16" class="happy"></iconify-icon>
+                <span>Happy</span>
+            </div>
+
+            <div class="item">
+                <iconify-icon icon="garden:face-very-happy-stroke-12" class="veryHappy"></iconify-icon>
+                <span>Good</span>
+            </div>
+
+            <div class="item">
+                <iconify-icon icon="garden:face-neutral-stroke-12" class="neutral"></iconify-icon>
+                <span>Neutral</span>
+            </div>
+
+            <div class="item">
+                <iconify-icon icon="streamline:sad-face" class="sad"></iconify-icon>
+                <span>Sad</span>
+            </div>
+
+            <div class="item">
+                <iconify-icon icon="fa-regular:angry" class="angry"></iconify-icon>
+                <span>Anxious</span>
+            </div>
+        </div>
+        <br>
+        <p class="register">
+            Last register:
+            <strong>Yesterday - Happy</strong>
+        </p>
+        <br>
+        <img src="img/grafico.png" alt="grafica" class="grafica">
+       
+
+    </section>
+
+    <!-- Estadísticas -->
+
+    <section class="stats">
+
+        <div class="box blue">
+            <iconify-icon icon="material-symbols-light:vital-signs" class="linea"></iconify-icon>
+            <h2>6/10</h2>
+            <p>Stress level</p>
+        </div>
+
+        <div class="box purple">
+            <iconify-icon icon="solar:moon-line-duotone" class="luna"></iconify-icon>
+            <h2>7h</h2>
+            <p>Hours of sleep</p>
+        </div>
+
+        <div class="box green">
+            <iconify-icon icon="streamline:money-graph-arrow-increase-ascend-growth-up-arrow-stats-graph-right-grow" class="flecha"></iconify-icon>
+            <h2>1km</h2>
+            <p>Physical activity</p>
+        </div>
+
+    </section>
+
+    <!-- Recomendación -->
+
+    <section class="recommendation">
+
+        <strong>Personalized recommendation:</strong>
+
+        Today seems like a good day for physical activity; we've noticed that it improves your mood, and it would be nice for you to take a break outdoors.
+
+    </section>
+
+    <!-- Próxima cita -->
+
+    <section class="card appointment">
+
+        <div class="top">
+            <h3>
+                <iconify-icon icon="fluent:calendar-48-regular" class="calendario"></iconify-icon>
+                Next appointment
+            </h3>
+
+        </div>
+
+        <div class="appointment-info">
+
+            <div class="avatar">
+                SB
+            </div>
+
+            <div class="nombre">
+                <h4>Dr. Samuel Bryson</h4>
+                <p>22 of march - 4:30 pm</p>
+            </div>
+
+            <button>
+                See details
+            </button>
+
+        </div>
+
+    </section>
+
+    <a href="Reporte01.html"><button class="main-btn">
+        Log my full day
+    </button></a>
+
+    <!-- Navegación -->
+
+    <nav>
+
+        <i class="fa-solid fa-house"></i>
+
+        <i class="fa-solid fa-chart-column"></i>
+
+        <i class="fa-regular fa-calendar"></i>
+
+    </nav>
+
+    <footer class="footer">
+
+
+            <nav class="bottom-nav">
+
+                <a href="home.html">
+                <iconify-icon icon="fa7-regular:home"></iconify-icon>
+                </a>
+                <a href="estadisticas.html">
+                <iconify-icon icon="material-symbols-light:bar-chart-4-bars"></iconify-icon>
+                </a>
+
+                <a href="agendar-cita.html">
+                    <iconify-icon icon="griddy-icons:calendar"></iconify-icon>
+                </a>
+            </nav>
+
+        </footer>
+
+</div>
+
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MindTrack - Statistics</title>
+
+    <link rel="stylesheet" href="css/estadisticas.css">
+    <link rel="stylesheet" href="css/status-bar.css">
+
+</head>
+
+
+<body>
+
+    <main class="app">
+
+        <div class="status-bar">
+            <span class="status-time">12:01</span>
+            <div class="status-icons">
+                <span><iconify-icon icon="pinhead:phone-bars"></iconify-icon></span>
+                <span><iconify-icon icon="material-symbols:wifi"></iconify-icon></span>
+                <span><iconify-icon icon="ic:baseline-battery-80"></iconify-icon></span>
+            </div>
+        </div>
+
+
+        <!-- =========================
+            HEADER
+        ========================== -->
+
+        <header class="header">
+
+
+            <img
+                src="img/MindTrack-Logo.png"
+                alt="MindTrack"
+                class="logo"
+            >
+
+
+            <button class="iconp">
+
+                <a href="settings.html">
+
+                    <iconify-icon
+                        icon="solar:user-outline"
+                        class="icon1">
+                    </iconify-icon>
+
+                </a>
+
+            </button>
+
+        </header>
+
+
+
+        <!-- =========================
+            CONTENIDO
+        ========================== -->
+
+        <section class="content">
+
+
+            <!-- FLECHA -->
+
+            <div class="back-area">
+
+                <a href="home.html" class="back-link">
+
+                    <iconify-icon
+                        icon="material-symbols-light:arrow-back-rounded">
+                    </iconify-icon>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- TITULO -->
+
+            <h1 class="summary-title">
+                Your emotional summary
+            </h1>
+
+
+
+            <!-- =========================
+                TARJETAS RESUMEN
+            ========================== -->
+<section class="summary-cards">
+
+    <!-- Recorded days -->
+    <article class="summary-card">
+
+        <div class="summary-icon blue">
+            <iconify-icon icon="material-symbols:calendar-month"></iconify-icon>
+        </div>
+
+        <strong>14</strong>
+
+        <span>
+            Recorded<br>days
+        </span>
+
+    </article>
+
+    <!-- Current mood -->
+    <article class="summary-card">
+
+        <div class="summary-icon">
+            <iconify-icon icon="ph:smiley"></iconify-icon>
+        </div>
+
+        <strong>Happy</strong>
+
+        <span>
+            Your current<br>mood
+        </span>
+
+    </article>
+
+    <!-- Average energy -->
+    <article class="summary-card">
+
+        <div class="summary-icon purple">
+            <iconify-icon icon="material-symbols:bolt"></iconify-icon>
+        </div>
+
+        <strong>6.4</strong>
+
+        <span>
+            Average<br>energy
+        </span>
+
+    </article>
+
+</section>
+
+
+            <!-- =========================
+                FILTROS
+            ========================== -->
+
+            <div class="filters">
+
+                <button class="filter active">
+                    Week
+                </button>
+
+                <button class="filter">
+                    Month
+                </button>
+
+                <button class="filter">
+                    All
+                </button>
+
+            </div>
+
+
+
+            <!-- =========================
+                GRAFICA MOOD
+            ========================== -->
+
+            <div class="chart-card mood-card">
+
+                <h2>
+                    Mood
+                </h2>
+
+
+                <div class="mood-chart">
+
+                    <div class="y-labels">
+
+                        <span>9</span>
+                        <span>6</span>
+                        <span>3</span>
+                        <span>0</span>
+
+                    </div>
+
+
+                    <div class="mood-graph">
+
+                        <div class="horizontal-line line-1"></div>
+                        <div class="horizontal-line line-2"></div>
+                        <div class="horizontal-line line-3"></div>
+                        <div class="horizontal-line line-4"></div>
+
+
+                        <svg
+                            viewBox="0 0 280 120"
+                            preserveAspectRatio="none"
+                            class="mood-svg"
+                        >
+
+                            <polyline
+                                points="5,112 48,20 95,40 137,92 177,54 225,52 270,64"
+                                fill="none"
+                                stroke="#5B8DEF"
+                                stroke-width="2"
+                            />
+
+                            <circle cx="5" cy="112" r="2.5"/>
+                            <circle cx="48" cy="20" r="2.5"/>
+                            <circle cx="95" cy="40" r="2.5"/>
+                            <circle cx="137" cy="92" r="2.5"/>
+                            <circle cx="177" cy="54" r="2.5"/>
+                            <circle cx="225" cy="52" r="2.5"/>
+                            <circle cx="270" cy="64" r="2.5"/>
+
+                        </svg>
+
+
+                        <div class="x-labels">
+
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                            <span>Fri</span>
+                            <span>Sat</span>
+                            <span>Sun</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                GRAFICA STRESS VS ENERGY
+            ========================== -->
+
+            <div class="chart-card stress-card">
+
+                <h2>
+                    Stress vs. Energy
+                </h2>
+
+
+                <div class="bar-chart">
+
+
+                    <!-- NUMEROS -->
+
+                    <div class="bar-y-labels">
+
+                        <span>120</span>
+                        <span>90</span>
+                        <span>60</span>
+                        <span>30</span>
+                        <span>0</span>
+
+                    </div>
+
+
+
+                    <!-- GRAFICA -->
+
+                    <div class="bars-area">
+
+
+                        <!-- LINEAS -->
+
+                        <div class="bar-line line120"></div>
+                        <div class="bar-line line90"></div>
+                        <div class="bar-line line60"></div>
+                        <div class="bar-line line30"></div>
+                        <div class="bar-line line0"></div>
+
+
+
+                        <!-- BARRAS -->
+
+                        <div class="bar-group">
+
+                            <div class="bars">
+
+                                <span
+                                    class="bar stress"
+                                    style="height: 67px;">
+                                </span>
+
+                                <span
+                                    class="bar energy"
+                                    style="height: 27px;">
+                                </span>
+
+                            </div>
+
+                            <span class="year">
+                                2012
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="bar-group">
+
+                            <div class="bars">
+
+                                <span
+                                    class="bar stress"
+                                    style="height: 39px;">
+                                </span>
+
+                                <span
+                                    class="bar energy"
+                                    style="height: 48px;">
+                                </span>
+
+                            </div>
+
+                            <span class="year">
+                                2013
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="bar-group">
+
+                            <div class="bars">
+
+                                <span
+                                    class="bar stress"
+                                    style="height: 56px;">
+                                </span>
+
+                                <span
+                                    class="bar energy"
+                                    style="height: 43px;">
+                                </span>
+
+                            </div>
+
+                            <span class="year">
+                                2014
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="bar-group">
+
+                            <div class="bars">
+
+                                <span
+                                    class="bar stress"
+                                    style="height: 58px;">
+                                </span>
+
+                                <span
+                                    class="bar energy"
+                                    style="height: 13px;">
+                                </span>
+
+                            </div>
+
+                            <span class="year">
+                                2015
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="bar-group">
+
+                            <div class="bars">
+
+                                <span
+                                    class="bar stress"
+                                    style="height: 28px;">
+                                </span>
+
+                                <span
+                                    class="bar energy"
+                                    style="height: 65px;">
+                                </span>
+
+                            </div>
+
+                            <span class="year">
+                                2016
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LEYENDA -->
+
+                <div class="legend">
+
+                    <div class="legend-item">
+
+                        <span class="legend-circle stress-circle"></span>
+
+                        <span>
+                            stress
+                        </span>
+
+                    </div>
+
+
+                    <div class="legend-item">
+
+                        <span class="legend-circle energy-circle"></span>
+
+                        <span>
+                            Energy
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                MOOD 30 DIAS
+            ========================== -->
+
+            <h2 class="section-title">
+                Mood during the last 30 days
+            </h2>
+
+
+
+            <div class="stats-list">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon happy">
+
+                        <iconify-icon
+                            icon="ph:smiley">
+                        </iconify-icon>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Frequent emotion
+                        </span>
+
+                        <strong>
+                            Happy
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon stress-stat">
+
+                        <iconify-icon
+                            icon="material-symbols:bar-chart">
+                        </iconify-icon>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Average stress
+                        </span>
+
+                        <strong>
+                            4.2/10
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon sleep">
+
+                        <iconify-icon
+                            icon="material-symbols:bed">
+                        </iconify-icon>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Average sleep
+                        </span>
+
+                        <strong>
+                            7.4 h
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon streak">
+
+                        <iconify-icon
+                            icon="material-symbols:local-fire-department">
+                        </iconify-icon>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Current streak
+                        </span>
+
+                        <strong>
+                            12 days
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                AUTOMATED INSIGHTS
+            ========================== -->
+
+            <h2 class="section-title insights-title">
+                Automated insights
+            </h2>
+
+
+
+            <div class="insights">
+
+
+                <!-- INSIGHT 1 -->
+
+                <div class="insight-card">
+
+                    <div class="insight-icon">
+
+                        <iconify-icon
+                            icon="ph:smiley-sad">
+                        </iconify-icon>
+
+                    </div>
+
+                    <p>
+                        You tend to feel more stressed on Tuesdays.
+                        Try to plan relaxing activities for that day.
+                    </p>
+
+                </div>
+
+
+
+                <!-- INSIGHT 2 -->
+
+                <div class="insight-card">
+
+                    <div class="insight-icon">
+
+                        <iconify-icon
+                            icon="ph:lightning">
+                        </iconify-icon>
+
+                    </div>
+
+                    <p>
+                        Your energy level has improved compared to last
+                        week. Keep up the good pace!
+                    </p>
+
+                </div>
+
+
+
+                <!-- INSIGHT 3 -->
+
+                <div class="insight-card">
+
+                    <div class="insight-icon">
+
+                        <iconify-icon
+                            icon="ph:fire">
+                        </iconify-icon>
+
+                    </div>
+
+                    <p>
+                        You've been tracking your emotions for 8
+                        consecutive days. Excellent consistency!
+                    </p>
+
+                </div>
+
+
+
+                <!-- INSIGHT 4 -->
+
+                <div class="insight-card">
+
+                    <div class="insight-icon">
+
+                        <iconify-icon
+                            icon="ph:smiley">
+                        </iconify-icon>
+
+                    </div>
+
+                    <p>
+                        Your emotional state has been stable this week.
+                        That is very positive.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!--=========================
+            FOOTER
+        ========================== -->
+
+        <nav class="bottom-nav">
+
+            <button
+                class="bottom-nav__item bottom-nav__item--active"
+                aria-label="Inicio">
+
+                <iconify-icon
+                    icon="fa7-regular:home">
+                </iconify-icon>
+
+            </button>
+
+
+            <button
+                class="bottom-nav__item"
+                aria-label="Estadísticas">
+
+                <iconify-icon
+                    icon="material-symbols-light:bar-chart-4-bars">
+                </iconify-icon>
+
+            </button>
+
+
+            <button
+                class="bottom-nav__item"
+                aria-label="Calendario">
+
+                <iconify-icon
+                    icon="griddy-icons:calendar">
+                </iconify-icon>
+
+            </button>
+
+        </nav>
+
+
+    </main>
+
+
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+</body>
+
+</html>
