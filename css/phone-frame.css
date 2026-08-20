@@ -1,0 +1,44 @@
+/* Shared device frame for every MindTrack screen. */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.phone-frame,
+body > .phone,
+body > .app,
+body > .profile {
+  width: 390px;
+  max-width: calc(100vw - 32px);
+  height: 844px;
+  min-height: 844px;
+  max-height: 844px;
+  border: 1px solid rgba(35, 45, 70, .12);
+  border-radius: 32px;
+  box-shadow: 0 14px 34px rgba(20, 32, 62, .18);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@media (max-width: 479px) {
+  body {
+    padding: 0;
+  }
+
+  .phone-frame,
+  body > .phone,
+  body > .app,
+  body > .profile {
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    min-height: 100vh;
+    max-height: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
