@@ -109,14 +109,10 @@ header{
 ========================================= */
 
 .page-content{
-
     width:100%;
-
     flex:1;
-
     overflow-y:auto;
     overflow-x:hidden;
-
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -391,7 +387,7 @@ header{
 
 .main-btn{
     width:calc(100% - 30px);
-    margin:10px 15px;
+    margin:18px 15px;
     padding:18px;
     border:none;
     border-radius:16px;
