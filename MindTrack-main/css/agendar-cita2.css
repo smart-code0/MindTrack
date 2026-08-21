@@ -1,0 +1,398 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #eef3ff;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #14142b;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.app {
+  width: min(390px, 100%);
+  min-height: 100vh;
+  background: #f8f9ff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 24px 52px rgba(16, 24, 40, 0.12);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #eaecf5;
+}
+
+.app-logo {
+  width: 120px;
+  object-fit: contain;
+}
+
+.top-icon {
+  color: #14142b;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.content {
+  flex: 1;
+  position: relative;
+  padding: 54px 20px 0;
+}
+
+.back-button {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.back-button iconify-icon {
+  font-size: 22px;
+}
+
+.welcome-screen {
+  margin-bottom: 14px;
+}
+
+.welcome-screen h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.welcome-screen p {
+  font-size: 14px;
+  color: #6c728f;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 20px;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.06);
+}
+
+.type-section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #5f667d;
+}
+
+.type-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.type-button {
+  background: #f7f8ff;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 12px 10px;
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.type-button.active {
+  background: #eef3ff;
+  border-color: rgba(79, 112, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.type-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(79, 112, 255, 0.12);
+}
+
+.type-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: #eef2ff;
+  color: #4f70ff;
+  font-size: 22px;
+}
+
+.type-button span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #22233f;
+  text-align: center;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.input-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6f7287;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  min-width: 0;
+  border-radius: 18px;
+  border: 1px solid #e8ecfb;
+  background: #fbfbff;
+  font-family: inherit;
+  font-size: 14px;
+  color: #14142b;
+}
+
+.input-group input,
+.input-group select {
+  height: 50px;
+  padding: 0 16px;
+}
+
+.input-group textarea {
+  min-height: 96px;
+  padding: 14px 16px;
+  line-height: 1.45;
+  resize: vertical;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: #a3aac8;
+}
+
+.reminder-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 22px;
+  background: #f5f6ff;
+  border: 1px solid #e7e9fb;
+}
+
+.reminder-labels {
+  display: grid;
+  gap: 4px;
+}
+
+.reminder-labels strong {
+  font-size: 14px;
+  color: #1c1f41;
+}
+
+.reminder-labels span {
+  font-size: 12px;
+  color: #6f7287;
+}
+
+.toggle-switch {
+  width: 46px;
+  height: 26px;
+  border-radius: 999px;
+  background: #d9dcff;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-knob {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.2s ease;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+}
+
+.toggle-switch.active {
+  background: #7e84ff;
+}
+
+.toggle-switch.active .toggle-knob {
+  left: 22px;
+}
+
+.submit-button {
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  padding: 16px 0;
+  background: linear-gradient(90deg, #628bea 0%, #7b85db 50%, #957fcb 100%);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.appointment-card {
+  margin-top: 20px;
+  padding: 18px 18px 20px;
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.appointment-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.appointment-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #14142b;
+}
+
+.appointment-subtitle {
+  font-size: 13px;
+  color: #6f7287;
+  margin-top: 4px;
+}
+
+.appointment-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-button {
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  border: 1px solid #e7e9fb;
+  background: #f8faff;
+  color: #4f70ff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.action-delete {
+  background: #fff1f3;
+  border-color: #ffd0d9;
+  color: #d7375f;
+}
+
+.appointment-info-row {
+  display: grid;
+  gap: 12px;
+}
+
+.appointment-info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #5f667d;
+}
+
+.info-icon {
+  color: #628bea;
+  font-size: 18px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+.bottom-nav {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+  border-top: 1px solid #d8d8d8;
+  flex-shrink: 0;
+}
+
+.bottom-nav .nav-link,
+.bottom-nav .nav-link.active {
+  color: #777;
+  font-size: 28px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.bottom-nav .nav-link:hover {
+  color: #5B84EA;
+}
+
+.bottom-nav .nav-link iconify-icon {
+  display: block;
+  font-size: 28px;
+  line-height: 1;
+}
+
+@media (max-width: 360px) {
+  .type-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .input-row {
+    grid-template-columns: 1fr;
+  }
+}

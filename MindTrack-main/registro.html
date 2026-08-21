@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindTrack | Crear cuenta</title>
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="stylesheet" href="css/status-bar.css">
+  <link rel="stylesheet" href="css/phone-frame.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+ 
+  <div class="phone-frame">
+ 
+    <div class="status-bar">
+      <span class="status-time">12:01</span>
+      <div class="status-icons">
+        <span><iconify-icon icon="pinhead:phone-bars"></iconify-icon></span>
+        <span><iconify-icon icon="material-symbols:wifi"></iconify-icon></span>
+        <span><iconify-icon icon="ic:baseline-battery-80"></iconify-icon></span>
+      </div>
+    </div>
+ 
+    <!-- Pantalla: Crear cuenta -->
+    <main class="screen signup-screen">
+ 
+      <section class="hero-panel">
+        <div class="logo-wrap">
+          <img src="img/MindTrack-Logo.png" class="logo">
+        </div>
+ 
+        <h2 class="hero-title">Create your account</h2>
+        <p class="hero-subtitle">Begin your journey towards<br>emotional well-being</p>
+      </section>
+ 
+      <!-- Tarjeta con borde azul destacado, tal como en el screenshot -->
+      <section class="form-card form-card--highlight">
+        <form class="auth-form" action="#" method="post">
+ 
+          <label class="field-label" for="fullname">Full name</label>
+          <div class="input-group">
+            <span class="input-icon"><iconify-icon icon="solar:user-outline" class="usuario"></iconify-icon></span>
+            <input type="text" id="fullname" name="fullname" placeholder="Your name">
+          </div>
+ 
+          <label class="field-label" for="email">Email</label>
+          <div class="input-group">
+            <span class="input-icon"><i class="fa-regular fa-envelope"></i></span>
+            <input type="email" id="email" name="email" placeholder="youremail@gmail.com">
+          </div>
+ 
+          <label class="field-label" for="password">Password</label>
+          <div class="input-group">
+            <span class="input-icon"><i class="fa-solid fa-lock"></i></span>
+            <input type="password" id="password" name="password" placeholder="**********">
+            <button type="button" class="toggle-visibility" aria-label="Mostrar contraseña"><i class="fa-regular fa-eye"></i></button>
+          </div>
+ 
+          <label class="field-label" for="confirm-password">Confirm your password</label>
+          <div class="input-group">
+            <span class="input-icon"><i class="fa-solid fa-lock"></i></span>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="**********">
+            <button type="button" class="toggle-visibility" aria-label="Mostrar contraseña"><i class="fa-regular fa-eye"></i></button>
+          </div>
+ 
+          <p class="terms-text">By confirming, you accept our Terms of Service and Privacy Policy.</p>
+ 
+          
+        </form>
+        <a href="loginrol.html" class="btn-primary btn-primary--top-margin">Create account</a>
+      </section>
+    </main>
+    
+  </div>
+ <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>   
+</body>
+</html>

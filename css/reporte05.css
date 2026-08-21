@@ -1,0 +1,570 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================================
+   APLICACIÓN
+========================================= */
+
+.app {
+    width:390px;
+    height:844px;
+    background:#EEF3FB;
+    display:flex;
+    flex-direction:column;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    position: relative;
+}
+
+.phone {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.status-bar {
+    height: 30px;
+    min-height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8px 26px 4px 26px;
+
+    background-color: #ffffff;
+
+    flex-shrink: 0;
+}
+
+.status-time {
+    font-size: 15px;
+    font-weight: bold;
+    color: #222;
+}
+
+.status-icons {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #222;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    width: 100%;
+    height: 85px;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #d9d9d9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    display: block;
+    width: 125px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+    object-fit: contain;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* =========================================
+   PERFIL
+========================================= */
+
+.iconp {
+    position: absolute;
+    font-size: 22px;
+    right: 19px;
+    top: 50%;
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;  
+    transform: translateY(-3px);
+}
+
+.iconp a {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon1 {
+    color: #000000;
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.content {
+    position: relative;
+
+    width: 100%;
+
+    flex: 1;
+
+    background-color: #f3f6fc;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding-top: 28px;
+}
+
+
+/* =========================================
+   FLECHA
+========================================= */
+
+.icon {
+    position: absolute;
+    top: 24px;
+    left: 14px;
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: #333333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+
+.icon a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon iconify-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 22px;
+    color: #333333;
+}
+
+
+/* =========================================
+   PREGUNTA
+========================================= */
+
+.question-header {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.question {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.question h1 {
+    font-size: 18px;
+
+    font-weight: 400;
+
+    line-height: 22px;
+
+    color: #222222;
+}
+
+.question p {
+    margin-top: 2px;
+
+    font-size: 14px;
+
+    line-height: 17px;
+
+    color: #444444;
+}
+
+
+/* =========================================
+   CAJA DE TEXTO
+========================================= */
+
+.textarea-container {
+    width: calc(100% - 78px);
+
+    height: 118px;
+
+    margin: 43px auto 0;
+
+    background-color: #ffffff;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 3px 5px rgba(0, 0, 0, 0.20);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.textarea-container textarea {
+    width: 100%;
+    height: 100%;
+
+    padding: 11px 14px 28px 14px;
+
+    border: none;
+
+    outline: none;
+
+    resize: none;
+
+    background: transparent;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    line-height: 16px;
+
+    color: #444444;
+}
+
+.textarea-container textarea::placeholder {
+    color: #b7b7b7;
+
+    opacity: 1;
+}
+
+
+/* =========================================
+   CONTADOR Y MICRÓFONO
+========================================= */
+
+.textarea-bottom {
+    position: absolute;
+
+    left: 14px;
+    right: 10px;
+    bottom: 6px;
+
+    height: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.textarea-bottom span {
+    font-size: 10px;
+
+    color: #333333;
+}
+
+.microphone {
+    width: 18px;
+    height: 18px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #333333;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.microphone iconify-icon {
+    font-size: 14px;
+
+    color: #333333;
+}
+
+
+/* =========================================
+   PREGUNTA SLIDER
+========================================= */
+
+.hope-section {
+    width: calc(100% - 110px);
+
+    margin: 96px auto 0;
+}
+
+.hope-question {
+    width: 100%;
+
+    margin: 0;
+
+    text-align: center;
+
+    color: #333333;
+
+    font-size: 14px;
+
+    line-height: 18px;
+}
+
+
+/* =========================================
+   SLIDER
+========================================= */
+
+.slider-container {
+    width: 100%;
+
+    margin-top: 58px;
+}
+
+.slider-container input {
+    width: 100%;
+
+    height: 5px;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background: #d5d9e0;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+/* CÍRCULO */
+
+.slider-container input::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 35px;
+    height: 23px;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    border: none;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.20);
+
+    cursor: pointer;
+}
+
+.slider-container input::-moz-range-thumb {
+    width: 35px;
+    height: 23px;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    border: none;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.20);
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   LOW / HIGH
+========================================= */
+
+.slider-labels {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 17px;
+
+    font-size: 12px;
+
+    color: #333333;
+}
+
+
+/* =========================================
+   PARTE INFERIOR
+========================================= */
+
+.bottom {
+    width: 100%;
+    height: 108px;
+    margin-top: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   FINISH
+========================================= */
+
+.finish-button {
+    width: 194px;
+    height: 43px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(
+        90deg,
+        #5d91eb,
+        #9b73d1
+    );
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(90,110,220,.4);
+    transition: .3s;
+}
+.finish-button:hover{
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   5/5
+========================================= */
+
+.bottom span {
+    position: absolute;
+    right: 35px;
+    bottom: 45px;
+    font-size: 15px;
+    color: #333333;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.bottom-nav {
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    padding: 0 20px;
+    background: #ffffff;
+    border-top: 1px solid #d8d8d8;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: #777;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.bottom-nav a:hover {
+    color: #5B84EA;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 395px) {
+
+    .icon {
+        left: 18px;
+    }
+
+    .iconp {
+        right: 18px;
+    }
+}

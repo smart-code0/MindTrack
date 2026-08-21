@@ -1,0 +1,69 @@
+/* Shared device frame for every MindTrack screen. */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.phone-frame,
+body > .phone,
+body > .app,
+body > .profile {
+  width: 390px;
+  max-width: calc(100vw - 32px);
+  height: 844px;
+  min-height: 844px;
+  max-height: 844px;
+  border: 1px solid rgba(35, 45, 70, .12);
+  border-radius: 32px;
+  box-shadow: 0 14px 34px rgba(20, 32, 62, .18);
+  overflow-x: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.phone-frame::-webkit-scrollbar,
+body > .phone::-webkit-scrollbar,
+body > .app::-webkit-scrollbar,
+body > .profile::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 479px) {
+  body {
+    padding: 0;
+  }
+
+  .phone-frame,
+  body > .phone,
+  body > .app,
+  body > .profile {
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    min-height: 100vh;
+    max-height: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+/* Keep the bottom navigation inside the visible phone frame while its
+   contents scroll.  This also overrides older per-page absolute/fixed rules
+   that positioned the navigation relative to the browser window. */
+.phone-frame .bottom-nav,
+body > .phone .bottom-nav,
+body > main.app .bottom-nav,
+body > .app > .bottom-nav {
+  position: sticky;
+  right: auto;
+  bottom: 0;
+  left: auto;
+  z-index: 10;
+  margin: auto 0 0;
+  flex-shrink: 0;
+}
