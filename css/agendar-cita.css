@@ -13,7 +13,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px 0;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .phone-frame {
