@@ -135,7 +135,7 @@ CONTENEDOR
     z-index: 10;
 }
 .back-button a {
-    color: #8b63d9;
+    color: #000000;
     text-decoration: none;
     display: flex;
     align-items: center;
