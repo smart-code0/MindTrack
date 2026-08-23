@@ -1,0 +1,525 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: #eeeeF8;
+
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   PHONE
+========================================= */
+
+.phone-frame {
+
+    width: 390px;
+    height: 844px;
+
+    background: #ffffff;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 40px rgba(40, 50, 100, 0.18);
+
+    position: relative;
+}
+
+
+/* =========================================
+   STATUS BAR
+========================================= */
+
+.status-bar {
+
+    width: 100%;
+    height: 45px;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 18px;
+
+    color: #111111;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    position: relative;
+    z-index: 10;
+}
+
+
+.status-icons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 15px;
+}
+
+.status-icons span {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.status-icons iconify-icon {
+
+    font-size: 16px;
+
+    color: #111111;
+}
+
+
+/* =========================================
+   SCREEN
+========================================= */
+
+.screen {
+
+    width: 100%;
+    height: calc(100% - 45px);
+
+    background: #edf1ff;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    width: 100%;
+    height: 355px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    text-align: center;
+
+    padding-top: 42px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+
+    width: 175px;
+
+    height: auto;
+
+    margin-bottom: 27px;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.hero h1 {
+
+    color: #172b85;
+
+    font-size: 23px;
+
+    font-weight: 500;
+
+    line-height: 30px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.hero p {
+
+    color: #929292;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 23px;
+}
+
+
+/* =========================================
+   WHITE CARD
+========================================= */
+
+.card {
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height: 500px;
+
+    background: #ffffff;
+
+    border-radius: 35px 35px 0 0;
+
+    padding: 42px 25px 30px;
+
+    box-shadow:
+        0 -5px 20px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.card label {
+
+    display: block;
+
+    color: #333333;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.input-box {
+
+    width: 100%;
+    height: 55px;
+
+    background: #f0f0f8;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 15px;
+
+    margin-bottom: 25px;
+
+    border: 2px solid transparent;
+}
+
+
+.input-box:focus-within {
+
+    border-color: #8aa0e6;
+
+    background: #f4f5ff;
+}
+
+
+.input-box i {
+
+    color: #8aa0e6;
+
+    font-size: 20px;
+
+    width: 20px;
+
+    flex-shrink: 0;
+}
+
+
+.input-box input {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    margin-left: 15px;
+
+    color: #555555;
+
+    font-size: 14px;
+}
+
+
+.input-box input::placeholder {
+
+    color: #999999;
+}
+
+
+/* =========================================
+   SEND BUTTON
+========================================= */
+
+.send-button {
+
+    width: 100%;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5f8df5 0%,
+            #9772d9 100%
+        );
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(70, 80, 130, 0.20);
+}
+
+
+.send-button i {
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.divider {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 35px;
+
+    margin-bottom: 25px;
+}
+
+
+.divider span {
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #dddddd;
+}
+
+
+.divider p {
+
+    color: #999999;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   INFO BOX
+========================================= */
+
+.info-box {
+
+    width: 100%;
+
+    min-height: 100px;
+
+    background: #f0f4ff;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 18px;
+}
+
+
+/* =========================================
+   LOCK CIRCLE
+========================================= */
+
+.lock-circle {
+
+    width: 52px;
+    height: 52px;
+
+    min-width: 52px;
+
+    border-radius: 50%;
+
+    background: #dce7ff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-right: 15px;
+}
+
+
+.lock-circle i {
+
+    color: #5f8df5;
+
+    font-size: 21px;
+}
+
+
+/* =========================================
+   INFO TEXT
+========================================= */
+
+.info-box p {
+
+    color: #555d78;
+
+    font-size: 12px;
+
+    line-height: 20px;
+}
+
+
+/* =========================================
+   BACK TO LOGIN
+========================================= */
+
+.back-login {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 30px;
+
+    text-decoration: none;
+
+    color: #5f8df5;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+
+.back-login i {
+
+    font-size: 17px;
+
+    margin-right: 10px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 500px) {
+
+    body {
+
+        align-items: flex-start;
+
+    }
+
+    .phone-frame {
+
+        width: 100vw;
+        height: 100vh;
+
+        border-radius: 0;
+
+        box-shadow: none;
+
+    }
+
+}
