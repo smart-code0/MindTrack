@@ -1,0 +1,33 @@
+/* Shared bottom navigation used only on screens with the three main icons. */
+.bottom-nav {
+  box-sizing: border-box;
+  width: 100%;
+  height: 70px;
+  min-height: 70px;
+  padding: 0 20px;
+  background: #ffffff;
+  border-top: 1px solid #d8d8d8;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-shrink: 0;
+}
+
+.bottom-nav a {
+  width: 44px;
+  height: 44px;
+  color: #777777;
+  font-size: 28px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.bottom-nav a:hover,
+.bottom-nav a.active {
+  color: #5b84ea;
+}
