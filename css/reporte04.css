@@ -1,0 +1,485 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* =========================================
+   APLICACIÓN
+========================================= */
+
+.app {
+    width:390px;
+    height:844px;
+    background:#EEF3FB;
+    display:flex;
+    flex-direction:column;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    position: relative;
+}
+
+.phone {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.status-bar {
+    height: 30px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 26px 4px 26px;
+    background-color: #ffffff;
+    flex-shrink: 0;
+}
+
+.status-time {
+    font-size: 15px;
+    font-weight: bold;
+    color: #222;
+}
+
+.status-icons {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #222;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    width: 100%;
+    height: 85px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    
+    width: 125px;
+    height: auto;
+}
+
+
+/* =========================================
+   ICONO DE USUARIO
+========================================= */
+
+.iconp {
+    position: absolute;
+    font-size: 20px;
+    right: 19px;
+    top: 50%;
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;  
+    transform: translateY(-3px);
+}
+
+
+.iconp a {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.icon1 {
+    color: #000000;
+    font-size: 20px;
+    transform: translateY(-10px);
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.content {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    background-color: #f3f6fc;
+    display: flex;
+    flex-direction: column;
+    padding-top: 28px;
+}
+
+
+/* =========================================
+   FLECHA DE REGRESO
+========================================= */
+
+.icon {
+    position: absolute;
+    top: 24px;
+    left: 14px;
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: #333333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+
+
+.icon a {
+
+    color: #8b63d9;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+
+.icon iconify-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 22px;
+    color: #333333;
+}
+
+
+/* =========================================
+   PREGUNTA
+========================================= */
+
+.question-header {
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.question {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.question h1 {
+    font-size: 18px;
+
+    font-weight: 400;
+
+    line-height: 22px;
+
+    color: #222222;
+}
+
+
+.question p {
+    margin-top: 2px;
+
+    font-size: 14px;
+
+    line-height: 17px;
+
+    color: #444444;
+}
+
+
+/* =========================================
+   CONTENEDOR DE OPCIONES
+========================================= */
+
+.options {
+    width: 100%;
+
+    margin-top: 46px;
+
+    padding-left: 54px;
+    padding-right: 54px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 44px;
+
+    row-gap: 31px;
+}
+
+
+/* =========================================
+   CHECKBOXES OCULTOS
+========================================= */
+
+.options input[type="checkbox"],
+#none {
+    position: absolute;
+
+    opacity: 0;
+
+    width: 0;
+    height: 0;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
+   OPCIONES
+========================================= */
+
+.options label,
+.none {
+    height: 43px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #aaaaaa;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 3px 4px rgba(0, 0, 0, 0.22);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    color: #555555;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.1s ease;
+}
+
+
+/* =========================================
+   EFECTO AL PULSAR
+========================================= */
+
+.options label:active,
+.none:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================
+   OPCIONES AZULES SELECCIONADAS
+========================================= */
+
+#outdoors:checked + label,
+#meditation:checked + label,
+#exercise:checked + label,
+#journal:checked + label,
+#music:checked + label,
+#none:checked + .none {
+
+    background-color: #E4F2FB;
+
+    border-color: #9FBACA;
+}
+
+
+/* =========================================
+   OPCIONES MORADAS SELECCIONADAS
+========================================= */
+
+#rest:checked + label,
+#medication:checked + label,
+#talked:checked + label,
+#therapy:checked + label,
+#family:checked + label {
+
+    background-color: #E8D9F2;
+
+    border-color: #BCA6C8;
+}
+
+
+/* =========================================
+   NONE OF THESE
+========================================= */
+
+.none {
+    width: 122px;
+
+    margin-top: 31px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    flex-shrink: 0;
+}
+
+.bottom {
+    width: 100%;
+    height: 108px;
+    margin-top: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   BOTÓN CONTINUE
+========================================= */
+
+.bottom button {
+    width: 194px;
+    height: 43px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(
+        90deg,
+        #5d91eb,
+        #9b73d1
+    );
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(90,110,220,.4);
+    transition: .3s;
+}
+
+.bottom button:hover{
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   NÚMERO DE PÁGINA
+========================================= */
+
+.bottom span {
+    position: absolute;
+    right: 35px;
+    top: 40px;
+    font-size: 15px;
+    color: #333333;
+}
+
+
+/* =========================================
+   BARRA DE NAVEGACIÓN INFERIOR
+========================================= */
+
+.bottom-nav {
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    padding: 0 20px;
+    background: #ffffff;
+    border-top: 1px solid #d8d8d8;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: #777;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.bottom-nav a:hover {
+    color: #5B84EA;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 395px) {
+
+    .options {
+        padding-left: 30px;
+        padding-right: 30px;
+
+        column-gap: 30px;
+    }
+
+
+    .icon {
+        left: 18px;
+    }
+
+
+    .iconp {
+        right: 18px;
+    }
+}

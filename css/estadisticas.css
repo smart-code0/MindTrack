@@ -1,0 +1,1077 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: #eeeeee;
+
+    display: flex;
+    justify-content: center;
+
+    font-family: 'Poppins', Arial, sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   APLICACIÓN
+========================================= */
+
+.app {
+    width: 100%;
+    max-width: 395px;
+    min-height: 100vh;
+
+    background-color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    width: 100%;
+    height: 85px;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #d9d9d9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    display: block;
+
+    width: 120px;
+    height: auto;
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* =========================================
+   FLECHA
+========================================= */
+
+.icon {
+    position: absolute;
+
+    left: 20px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 24px;
+    height: 24px;
+
+    padding: 0;
+    margin: 0;
+
+    background: none;
+    border: none;
+
+    color: #333333;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+
+.icon a {
+    text-decoration: none;
+    color: inherit;
+
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.icon iconify-icon {
+    font-size: 21px;
+}
+
+
+/* =========================================
+   PERFIL
+========================================= */
+
+.iconp {
+    position: absolute;
+
+    right: 20px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 24px;
+    height: 24px;
+
+    padding: 0;
+    margin: 0;
+
+    background: none;
+    border: none;
+
+    color: #000000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+
+.iconp a {
+    text-decoration: none;
+    color: inherit;
+
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.icon1 {
+    font-size: 19px;
+    color: #000000;
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.content {
+    width: 100%;
+
+    background-color: #f3f6fc;
+
+    padding: 32px 20px 110px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: visible;
+}
+
+
+/* =========================================
+   FLECHA SUPERIOR DEL CONTENIDO
+========================================= */
+
+.back-area {
+    width: 100%;
+    height: 20px;
+
+    position: relative;
+}
+
+
+.back-link {
+    position: absolute;
+
+    left: 3px;
+    top: 0;
+
+    color: #333333;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.back-link iconify-icon {
+    font-size: 21px;
+}
+
+
+/* =========================================
+   TITULO
+========================================= */
+
+.summary-title {
+    margin-top: 14px;
+
+    text-align: center;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    color: #5b7fee;
+
+    text-decoration: none;
+}
+
+
+/* =========================================
+   TARJETAS DE RESUMEN
+========================================= */
+
+/* =========================================
+   TARJETAS RESUMEN
+========================================= */
+
+/* =========================================
+   TARJETAS SUPERIORES
+========================================= */
+
+.summary-cards{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    margin:25px 0;
+
+}
+
+.summary-card{
+
+    flex:1;
+
+    max-width:95px;
+
+    height:145px;
+
+    background:linear-gradient(135deg,#6d8eef,#9b7ad0);
+
+    border-radius:16px;
+
+    padding:12px 8px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    box-shadow:0 5px 8px rgba(0,0,0,.18);
+
+}
+
+.summary-icon{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.15);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:14px;
+
+    font-size:20px;
+
+    color:#fff;
+
+}
+
+.summary-card span{
+
+    font-size:9px;
+
+    color:#fff;
+
+    line-height:1.3;
+
+    margin-bottom:8px;
+
+}
+
+.summary-card strong{
+
+    font-size:14px;
+
+    font-weight:500;
+
+    color:#fff;
+
+}
+
+
+/* =========================================
+   FILTROS
+========================================= */
+
+.filters {
+    width: 100%;
+
+    margin-top: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 0 10px;
+}
+
+.filter {
+    width: 72px;
+    height: 31px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: linear-gradient(
+        90deg,
+        #5e82df,
+        #9277d1
+    );
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    box-shadow:
+        0 3px 4px rgba(0, 0, 0, 0.20);
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   TARJETAS DE GRÁFICAS
+========================================= */
+
+.chart-card {
+    width: 100%;
+
+    background-color: #ffffff;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 3px 5px rgba(0, 0, 0, 0.22);
+
+    padding: 10px;
+
+    overflow: hidden;
+}
+
+
+.mood-card {
+    height: 200px;
+
+    margin-top: 29px;
+}
+
+
+.stress-card {
+    height: 200px;
+
+    margin-top: 48px;
+}
+
+
+.chart-card h2 {
+    font-size: 13px;
+
+    font-weight: 400;
+
+    color: #333333;
+}
+
+
+/* =========================================
+   GRAFICA MOOD
+========================================= */
+
+.mood-chart {
+    width: 100%;
+
+    height: 145px;
+
+    margin-top: 10px;
+
+    display: flex;
+}
+
+
+.y-labels {
+    width: 25px;
+
+    height: 120px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    padding-bottom: 0;
+
+    color: #999999;
+
+    font-size: 8px;
+}
+
+
+.mood-graph {
+    flex: 1;
+
+    height: 125px;
+
+    position: relative;
+
+    margin-left: 5px;
+}
+
+
+.horizontal-line {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    height: 1px;
+
+    background-color: #dfe3eb;
+}
+
+
+.line-1 {
+    top: 0;
+}
+
+
+.line-2 {
+    top: 33%;
+}
+
+
+.line-3 {
+    top: 66%;
+}
+
+
+.line-4 {
+    top: 100%;
+}
+
+
+.mood-svg {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 120px;
+
+    overflow: visible;
+}
+
+
+.mood-svg circle {
+    fill: #5b8def;
+}
+
+
+.x-labels {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: -15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #999999;
+
+    font-size: 8px;
+}
+
+
+/* =========================================
+   GRAFICA DE BARRAS
+========================================= */
+
+.bar-chart {
+    width: 100%;
+
+    height: 130px;
+
+    margin-top: 10px;
+
+    display: flex;
+}
+
+
+.bar-y-labels {
+    width: 27px;
+
+    height: 105px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    color: #999999;
+
+    font-size: 8px;
+
+    padding-bottom: 0;
+}
+
+
+.bars-area {
+    flex: 1;
+
+    height: 105px;
+
+    position: relative;
+
+    border-left: 1px solid #555555;
+
+    border-bottom: 1px solid #555555;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: flex-end;
+
+    padding: 0 8px;
+}
+
+
+.bar-line {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    height: 1px;
+
+    background-color: #e0e3e8;
+
+    z-index: 0;
+}
+
+
+.line120 {
+    top: 0;
+}
+
+
+.line90 {
+    top: 25%;
+}
+
+
+.line60 {
+    top: 50%;
+}
+
+
+.line30 {
+    top: 75%;
+}
+
+
+.line0 {
+    bottom: 0;
+
+    background-color: #555555;
+}
+
+
+.bar-group {
+    width: 30px;
+
+    height: 100%;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    z-index: 2;
+}
+
+
+.bars {
+    height: 100%;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 3px;
+}
+
+
+.bar {
+    width: 8px;
+
+    border-radius: 4px 4px 0 0;
+
+    display: block;
+}
+
+
+.stress {
+    background-color: #ec5c76;
+}
+
+
+.energy {
+    background-color: #5b8def;
+}
+
+
+.year {
+    position: absolute;
+
+    bottom: -17px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #999999;
+
+    font-size: 8px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   LEYENDA
+========================================= */
+
+.legend {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 7px;
+
+    margin-left: 13px;
+
+    color: #999999;
+
+    font-size: 9px;
+}
+
+
+.legend-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+
+.legend-circle {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+}
+
+
+.stress-circle {
+    background-color: #ec5c76;
+}
+
+
+.energy-circle {
+    background-color: #5b8def;
+}
+
+
+/* =========================================
+   TITULOS DE SECCIONES
+========================================= */
+
+.section-title {
+    width: 100%;
+
+    margin-top: 42px;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    color: #111111;
+}
+
+
+.insights-title {
+    margin-top: 40px;
+}
+
+
+/* =========================================
+   ESTADISTICAS
+========================================= */
+
+.stats-list {
+    width: 100%;
+
+    margin-top: 31px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.stat-card {
+    width: 184px;
+    height: 76px;
+
+    background-color: #ffffff;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 3px 4px rgba(0, 0, 0, 0.22);
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 10px;
+}
+
+
+.stat-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 11px;
+
+    flex-shrink: 0;
+}
+
+
+.stat-icon iconify-icon {
+    font-size: 21px;
+}
+
+
+.happy {
+    background-color: #e8e0ff;
+    color: #806cff;
+}
+
+
+.stress-stat {
+    background-color: #d9ffe2;
+    color: #111111;
+}
+
+
+.sleep {
+    background-color: #cfe3ff;
+    color: #5487df;
+}
+
+
+.streak {
+    background-color: #ff9b9d;
+    color: #c33c42;
+}
+
+
+.stat-card div:last-child {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1px;
+}
+
+
+.stat-card span {
+    font-size: 10px;
+
+    color: #555555;
+}
+
+
+.stat-card strong {
+    font-size: 10px;
+
+    font-weight: 500;
+
+    color: #555555;
+}
+
+
+/* =========================================
+   AUTOMATED INSIGHTS
+========================================= */
+
+.insights {
+    width: 100%;
+
+    margin-top: 29px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+.insight-card {
+    width: 100%;
+
+    min-height: 61px;
+
+    background-color: #ffffff;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 12px 14px;
+}
+
+
+.insight-icon {
+    width: 28px;
+    height: 28px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 10px;
+
+    color: #000000;
+}
+
+
+.insight-icon iconify-icon {
+    font-size: 22px;
+}
+
+
+.insight-card p {
+    margin: 0;
+
+    font-size: 9px;
+
+    line-height: 13px;
+
+    color: #8588a1;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    position: sticky;
+    bottom: 0;
+
+    width: 100%;
+    max-width: 395px;
+
+    height: 70px;
+
+    margin-top: -70px;
+
+    z-index: 1000;
+
+    flex-shrink: 0;
+}
+
+
+.bottom-nav {
+    width: 100%;
+    height: 70px;
+
+    background-color: #ffffff;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.08);
+
+    border-radius: 0 0 25px 25px;
+}
+
+
+.bottom-nav a {
+    text-decoration: none;
+
+    color: #777777;
+
+    font-size: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+
+.bottom-nav a:hover {
+    color: #5B84EA;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 395px) {
+
+    .content {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+
+    .summary-cards {
+        gap: 12px;
+    }
+
+
+    .filters {
+        padding: 0 7px;
+    }
+
+
+    .filter {
+        width: 72px;
+    }
+
+}
+
+
+@media (max-width: 350px) {
+
+    .summary-card {
+        width: 62px;
+    }
+
+
+    .summary-cards {
+        gap: 7px;
+    }
+
+
+    .filter {
+        width: 68px;
+    }
+
+
+    .stat-card {
+        width: 175px;
+    }
+
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindTrack | Iniciar sesión</title>
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="stylesheet" href="css/status-bar.css">
+  <link rel="stylesheet" href="css/phone-frame.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+ 
+  <!-- Contenedor que simula el teléfono -->
+  <div class="phone-frame">
+ 
+    <!-- Barra de estado (hora, señal, wifi, batería) -->
+    <div class="status-bar">
+      <span class="status-time">12:01</span>
+      <div class="status-icons">
+        <span><iconify-icon icon="pinhead:phone-bars"></iconify-icon></span>
+        <span><iconify-icon icon="material-symbols:wifi"></iconify-icon></span>
+        <span><iconify-icon icon="ic:baseline-battery-80"></iconify-icon></span>
+      </div>
+    </div>
+ 
+    <!-- Pantalla: Login -->
+    <main class="screen login-screen">
+ 
+      <!-- Sección superior con degradado y branding -->
+      <section class="hero-panel">
+        <div class="logo-wrap">
+          <br>  
+          <img src="img/MindTrack-Logo.png" class="logo">
+        </div>
+ 
+        <h2 class="hero-title">Welcome Back!</h2>
+        <p class="hero-subtitle">Continue your journey towards<br>emotional well-being</p>
+      </section>
+ 
+      <!-- Tarjeta blanca inferior con el formulario -->
+      <section class="form-card">
+        <form class="auth-form" action="#" method="post">
+ 
+          <label class="field-label" for="email">Email</label>
+          <div class="input-group">
+            <span class="input-icon"><i class="fa-regular fa-envelope" class="email-icon"></i></span>
+            <input type="email" id="email" name="email" placeholder="youremail@gmail.com">
+          </div>
+ 
+          <label class="field-label" for="password">Password</label>
+          <div class="input-group">
+            <span class="input-icon"><i class="fa-solid fa-lock"></i></span>
+            <input type="password" id="password" name="password" placeholder="**********">
+            <button type="button" class="toggle-visibility" aria-label="Mostrar contraseña"><iconify-icon icon="solar:eye-linear" class="eye"></iconify-icon></button>
+          </div>
+ 
+          <a href="#" class="forgot-link">Forgot your password?</a>
+          
+          
+          <a href="home.html" class="btn-primary">Login</a>
+         
+          <div class="divider">
+            <span>or&nbsp; continue with</span>
+          </div>
+ 
+          <button type="button" class="btn-google">
+            <span class="google-icon"><img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"></span>
+            <span>Continue with Google</span>
+          </button>
+          <br>
+ 
+          <p class="signup-hint">Don't have an account? <a href="Registro.html">Sign up</a></p>
+        </form>
+      </section>
+    </main>
+ 
+  </div>
+
+ <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</body>
+</html>
+ 
