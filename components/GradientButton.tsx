@@ -21,7 +21,7 @@ type Props = {
 export function GradientButton({ label, children, onPress, colors, locations, style, textStyle, contentStyle }: Props) {
   const radius = StyleSheet.flatten(style)?.borderRadius;
   return (
-    <Pressable onPress={onPress} accessibilityRole="button" style={style}>
+    <Pressable onPress={onPress} role="button" style={style}>
       <LinearGradient
         colors={colors}
         locations={locations}

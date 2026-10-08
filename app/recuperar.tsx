@@ -18,7 +18,7 @@ export default function RecoverScreen() {
     <Screen backgroundColor="#edf1ff" outerColor="#eeeeF8" bottomInset>
       <ScrollView contentContainerStyle={styles.scroll} keyboardShouldPersistTaps="handled" bounces={false}>
         <View style={styles.hero}>
-          <Image source={require('@/img/MindTrack-Logo.png')} style={styles.logo} accessibilityLabel="MindTrack" />
+          <Image source={require('@/img/MindTrack-Logo.png')} style={styles.logo} alt="MindTrack" />
           <Text style={styles.title}>Forgot your password?</Text>
           <Text style={styles.text}>{"Enter your email and we'll send you\na link to reset your password."}</Text>
         </View>
@@ -66,7 +66,7 @@ export default function RecoverScreen() {
             </Text>
           </View>
 
-          <Pressable style={styles.back} onPress={() => router.navigate('/')} accessibilityRole="link">
+          <Pressable style={styles.back} onPress={() => router.navigate('/')} role="link">
             <Icon name="fa-solid:arrow-left" size={17} color="#5f8df5" style={styles.backIcon} />
             <Text style={styles.backText}>Back to login</Text>
           </Pressable>

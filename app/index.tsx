@@ -33,7 +33,7 @@ export default function LoginScreen() {
           <Text style={authStyles.label}>Password</Text>
           <AuthInput icon="fa-solid:lock" placeholder="**********" password="solar" autoComplete="password" />
 
-          <Pressable onPress={() => router.navigate('/recuperar')} accessibilityRole="link">
+          <Pressable onPress={() => router.navigate('/recuperar')} role="link">
             <Text style={styles.forgot}>Forgot your password?</Text>
           </Pressable>
 
@@ -48,14 +48,14 @@ export default function LoginScreen() {
 
           <Text style={styles.divider}>{'or  continue with'}</Text>
 
-          <Pressable style={styles.google} accessibilityRole="button">
+          <Pressable style={styles.google} role="button">
             <Image source={{ uri: 'https://cdn-icons-png.flaticon.com/512/2991/2991148.png' }} style={styles.googleIcon} />
             <Text style={styles.googleText}>Continue with Google</Text>
           </Pressable>
 
           <Text style={styles.signupHint}>
             {"Don't have an account? "}
-            <Text style={styles.signupLink} onPress={() => router.navigate('/registro')} accessibilityRole="link">
+            <Text style={styles.signupLink} onPress={() => router.navigate('/registro')} role="link">
               Sign up
             </Text>
           </Text>

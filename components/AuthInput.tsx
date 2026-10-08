@@ -40,8 +40,8 @@ export function AuthInput({ icon, iconBoxHeight = 23, password, ...inputProps }:
         <Pressable
           onPress={() => setHidden((h) => !h)}
           style={[styles.eye, { height: eye.boxHeight }]}
-          accessibilityRole="button"
-          accessibilityLabel="Mostrar contraseña"
+          role="button"
+          aria-label="Mostrar contraseña"
           hitSlop={8}
         >
           <Icon name={eye.name} size={eye.size} color={eye.color} />

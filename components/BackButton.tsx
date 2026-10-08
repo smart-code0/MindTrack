@@ -16,8 +16,8 @@ export function BackButton({ href, size = 22, color = '#000000', style }: Props)
     <Pressable
       onPress={() => router.navigate(href)}
       hitSlop={12}
-      accessibilityRole="link"
-      accessibilityLabel="Volver"
+      role="link"
+      aria-label="Volver"
       style={style}
     >
       <Icon name="material-symbols-light:arrow-back-rounded" size={size} color={color} />

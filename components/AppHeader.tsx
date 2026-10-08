@@ -15,12 +15,12 @@ type Props = {
 export function AppHeader({ iconColor = colors.ink, iconOffsetY = 0 }: Props) {
   return (
     <View style={styles.header}>
-      <Image source={require('@/img/MindTrack-Logo.png')} style={styles.logo} accessibilityLabel="MindTrack" />
+      <Image source={require('@/img/MindTrack-Logo.png')} style={styles.logo} alt="MindTrack" />
       <Pressable
         style={styles.profile}
         onPress={() => router.navigate('/ajustes')}
-        accessibilityRole="button"
-        accessibilityLabel="Perfil"
+        role="button"
+        aria-label="Perfil"
       >
         <Icon name="solar:user-outline" size={20} color={iconColor} style={{ transform: [{ translateY: iconOffsetY }] }} />
       </Pressable>
