@@ -1,7 +1,7 @@
 import { router } from 'expo-router';
 import { Image, Pressable, StyleSheet, View } from 'react-native';
 
-import { colors } from '@/constants/theme';
+import { colors, images, LOGO_RATIO } from '@/constants/theme';
 import { Icon } from './Icon';
 
 type Props = {
@@ -15,7 +15,7 @@ type Props = {
 export function AppHeader({ iconColor = colors.ink, iconOffsetY = 0 }: Props) {
   return (
     <View style={styles.header}>
-      <Image source={require('@/img/MindTrack-Logo.png')} style={styles.logo} alt="MindTrack" />
+      <Image source={images.logo} style={styles.logo} alt="MindTrack" />
       <Pressable
         style={styles.profile}
         onPress={() => router.navigate('/ajustes')}
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  logo: { width: 125, height: 125 * (113 / 386) },
+  logo: { width: 125, height: 125 / LOGO_RATIO },
   profile: {
     position: 'absolute',
     right: 20,

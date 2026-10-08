@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { fonts } from './theme';
+import { fonts, LOGO_RATIO } from './theme';
 
 /** Estilos compartidos por login y registro (style1.css). */
 export const authStyles = StyleSheet.create({
@@ -13,7 +13,7 @@ export const authStyles = StyleSheet.create({
     paddingBottom: 40,
   },
   logoWrap: { alignItems: 'center', marginBottom: 22 },
-  logo: { width: 125, height: 125 * (113 / 386) },
+  logo: { width: 125, height: 125 / LOGO_RATIO },
   heroTitle: { ...fonts.arial(), fontSize: 24, color: '#000B6B', marginBottom: 8, textAlign: 'center' },
   heroSubtitle: { ...fonts.arial(), fontSize: 14, lineHeight: 21, color: '#949494', textAlign: 'center' },
   formCard: {

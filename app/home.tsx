@@ -8,7 +8,7 @@ import { GradientButton } from '@/components/GradientButton';
 import { Icon } from '@/components/Icon';
 import { Screen } from '@/components/Screen';
 import { IconName } from '@/constants/icons';
-import { fonts, gradients, horizontal, vertical } from '@/constants/theme';
+import { fonts, gradients, horizontal, images, vertical } from '@/constants/theme';
 
 const MOODS: { icon: IconName; label: string }[] = [
   { icon: 'garden:face-very-happy-stroke-16', label: 'Happy' },
@@ -58,7 +58,7 @@ export default function HomeScreen() {
             {'Last register: '}
             <Text style={styles.registerStrong}>Yesterday - Happy</Text>
           </Text>
-          <Image source={require('@/img/grafico.png')} style={styles.chart} alt="grafica" />
+          <Image source={images.chart} style={styles.chart} alt="grafica" />
         </View>
 
         <View style={styles.stats}>

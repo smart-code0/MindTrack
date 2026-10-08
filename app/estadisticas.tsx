@@ -3,7 +3,7 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Svg, { Circle, Polyline } from 'react-native-svg';
 
 import { AppHeader } from '@/components/AppHeader';
-import { BackButton } from '@/components/BackButton';
+import { BackArea } from '@/components/BackButton';
 import { BottomNav } from '@/components/BottomNav';
 import { Icon } from '@/components/Icon';
 import { Screen } from '@/components/Screen';
@@ -61,9 +61,7 @@ export default function StatisticsScreen() {
         <AppHeader iconColor="#000000" />
 
         <View style={styles.content}>
-          <View style={styles.backArea}>
-            <BackButton href="/home" size={21} color="#333333" style={styles.back} />
-          </View>
+          <BackArea href="/home" />
 
           <Text style={styles.title}>Your emotional summary</Text>
 
@@ -202,8 +200,6 @@ const text = fonts.arial();
 
 const styles = StyleSheet.create({
   content: { backgroundColor: '#f3f6fc', paddingTop: 32, paddingHorizontal: 18, paddingBottom: 110 },
-  backArea: { height: 20 },
-  back: { position: 'absolute', left: 3, top: 0 },
   title: { ...text, marginTop: 14, textAlign: 'center', fontSize: 18, color: '#5b7fee' },
   summaryCards: { flexDirection: 'row', justifyContent: 'space-between', marginVertical: 25 },
   summaryCard: {

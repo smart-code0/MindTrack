@@ -5,7 +5,7 @@ import { Image, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 
 import { GradientButton } from '@/components/GradientButton';
 import { Icon } from '@/components/Icon';
 import { Screen } from '@/components/Screen';
-import { fonts } from '@/constants/theme';
+import { fonts, images, LOGO_RATIO } from '@/constants/theme';
 
 /** Alto de la pantalla bajo la barra de estado en el diseño original (844 − 45). */
 const DESIGN_HEIGHT = 799;
@@ -18,7 +18,7 @@ export default function RecoverScreen() {
     <Screen backgroundColor="#edf1ff" outerColor="#eeeeF8" bottomInset>
       <ScrollView contentContainerStyle={styles.scroll} keyboardShouldPersistTaps="handled" bounces={false}>
         <View style={styles.hero}>
-          <Image source={require('@/img/MindTrack-Logo.png')} style={styles.logo} alt="MindTrack" />
+          <Image source={images.logo} style={styles.logo} alt="MindTrack" />
           <Text style={styles.title}>Forgot your password?</Text>
           <Text style={styles.text}>{"Enter your email and we'll send you\na link to reset your password."}</Text>
         </View>
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   // En pantallas bajas se desplaza en lugar de tapar el título con la tarjeta.
   scroll: { flexGrow: 1, minHeight: DESIGN_HEIGHT },
   hero: { height: 355, alignItems: 'center', paddingTop: 42 },
-  logo: { width: 175, height: 175 * (113 / 386), marginBottom: 27 },
+  logo: { width: 175, height: 175 / LOGO_RATIO, marginBottom: 27 },
   title: { ...fonts.arial(), fontSize: 23, lineHeight: 30, color: '#172b85', marginBottom: 12, textAlign: 'center' },
   text: { ...fonts.arial(), fontSize: 14, lineHeight: 23, color: '#929292', textAlign: 'center' },
   card: {

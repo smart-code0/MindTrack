@@ -5,7 +5,7 @@ import { GradientButton } from '@/components/GradientButton';
 import { Icon } from '@/components/Icon';
 import { Screen } from '@/components/Screen';
 import { IconName } from '@/constants/icons';
-import { fonts } from '@/constants/theme';
+import { fonts, images, LOGO_RATIO } from '@/constants/theme';
 
 const ROLES: { icon: IconName; title: string; text: string; selected?: boolean }[] = [
   {
@@ -26,7 +26,7 @@ export default function RoleScreen() {
   return (
     <Screen backgroundColor="#EEF3FF" outerColor="#ECECEC" bottomInset>
       <View style={styles.header}>
-        <Image source={require('@/img/MindTrack-Logo.png')} style={styles.logo} />
+        <Image source={images.logo} style={styles.logo} alt="MindTrack" />
       </View>
 
       <ScrollView contentContainerStyle={styles.main} bounces={false}>
@@ -59,7 +59,7 @@ export default function RoleScreen() {
 
 const styles = StyleSheet.create({
   header: { height: 82, backgroundColor: '#ffffff', alignItems: 'center', justifyContent: 'center' },
-  logo: { width: 125, height: 125 * (113 / 386) },
+  logo: { width: 125, height: 125 / LOGO_RATIO },
   main: { alignItems: 'center', paddingTop: 24, paddingBottom: 24 },
   title: { ...fonts.poppins(600), fontSize: 20, color: '#243A9F', marginBottom: 10 },
   subtitle: {

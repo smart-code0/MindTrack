@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, TextInput, TextInputProps, View } from 'react-native';
 
 import { AppHeader } from '@/components/AppHeader';
-import { BackButton } from '@/components/BackButton';
+import { BackArea } from '@/components/BackButton';
 import { BottomNav } from '@/components/BottomNav';
 import { Dropdown } from '@/components/Dropdown';
 import { GradientButton } from '@/components/GradientButton';
@@ -74,9 +74,7 @@ export default function NewAppointmentScreen() {
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}
       >
-        <View style={styles.backArea}>
-          <BackButton href="/citas" size={21} color="#333333" style={styles.back} />
-        </View>
+        <BackArea href="/citas" />
 
         <View style={styles.welcome}>
           <Text style={styles.title}>New citation</Text>
@@ -176,8 +174,6 @@ export default function NewAppointmentScreen() {
 const styles = StyleSheet.create({
   flex: { flex: 1 },
   content: { paddingTop: 18, paddingHorizontal: 20 },
-  backArea: { height: 20 },
-  back: { position: 'absolute', left: 3, top: 0 },
   welcome: { marginBottom: 14 },
   title: { ...fonts.poppins(700), fontSize: 24, color: '#14142b', marginBottom: 6 },
   subtitle: { ...fonts.poppins(), fontSize: 14, color: '#6c728f' },

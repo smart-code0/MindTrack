@@ -5,7 +5,7 @@ import { AuthInput } from '@/components/AuthInput';
 import { GradientButton } from '@/components/GradientButton';
 import { Screen } from '@/components/Screen';
 import { authStyles } from '@/constants/authStyles';
-import { fonts, gradients } from '@/constants/theme';
+import { fonts, gradients, images } from '@/constants/theme';
 
 /** Iniciar sesión (index.html). */
 export default function LoginScreen() {
@@ -14,7 +14,7 @@ export default function LoginScreen() {
       <ScrollView contentContainerStyle={authStyles.scroll} keyboardShouldPersistTaps="handled" bounces={false}>
         <View style={authStyles.hero}>
           <View style={[authStyles.logoWrap, styles.logoWrap]}>
-            <Image source={require('@/img/MindTrack-Logo.png')} style={authStyles.logo} />
+            <Image source={images.logo} style={authStyles.logo} alt="MindTrack" />
           </View>
           <Text style={authStyles.heroTitle}>Welcome Back!</Text>
           <Text style={authStyles.heroSubtitle}>{'Continue your journey towards\nemotional well-being'}</Text>

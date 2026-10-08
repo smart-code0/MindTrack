@@ -1,5 +1,5 @@
 import { Href, router } from 'expo-router';
-import { Pressable, StyleProp, ViewStyle } from 'react-native';
+import { Pressable, StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
 
 import { Icon } from './Icon';
 
@@ -24,3 +24,17 @@ export function BackButton({ href, size = 22, color = '#000000', style }: Props)
     </Pressable>
   );
 }
+
+/** Fila de 20 px con la flecha gris (.back-area de citas, nueva cita y estadísticas). */
+export function BackArea({ href }: { href: Href }) {
+  return (
+    <View style={styles.area}>
+      <BackButton href={href} size={21} color="#333333" style={styles.areaButton} />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  area: { height: 20 },
+  areaButton: { position: 'absolute', left: 3, top: 0 },
+});

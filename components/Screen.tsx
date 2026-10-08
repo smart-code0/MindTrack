@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { StyleSheet, useWindowDimensions, View } from 'react-native';
+import { KeyboardAvoidingView, Platform, StyleSheet, useWindowDimensions, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { colors, DESIGN_WIDTH } from '@/constants/theme';
@@ -35,7 +35,10 @@ export function Screen({ children, backgroundColor, outerColor = '#eef3ff', topC
         ]}
       >
         <View style={{ height: insets.top, backgroundColor: topColor }} />
-        {children}
+        {/* En iOS el teclado no redimensiona la pantalla: se deja espacio para que no tape los campos. */}
+        <KeyboardAvoidingView style={styles.flex} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+          {children}
+        </KeyboardAvoidingView>
       </View>
     </View>
   );
@@ -45,4 +48,5 @@ const styles = StyleSheet.create({
   outer: { flex: 1, alignItems: 'center' },
   column: { flex: 1, width: '100%', overflow: 'hidden' },
   columnWide: { maxWidth: DESIGN_WIDTH },
+  flex: { flex: 1 },
 });

@@ -4,7 +4,7 @@ import { useCallback, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { AppHeader } from '@/components/AppHeader';
-import { BackButton } from '@/components/BackButton';
+import { BackArea } from '@/components/BackButton';
 import { BottomNav } from '@/components/BottomNav';
 import { Icon } from '@/components/Icon';
 import { Screen } from '@/components/Screen';
@@ -49,9 +49,7 @@ export default function AppointmentsScreen() {
       <AppHeader />
 
       <ScrollView style={styles.flex} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-        <View style={styles.backArea}>
-          <BackButton href="/home" size={21} color="#333333" style={styles.back} />
-        </View>
+        <BackArea href="/home" />
 
         <View style={styles.pageHeader}>
           <Text style={styles.title}>Schedule an appointment</Text>
@@ -160,8 +158,6 @@ const bold = fonts.arial(true);
 const styles = StyleSheet.create({
   flex: { flex: 1 },
   content: { paddingTop: 22, paddingHorizontal: 20, paddingBottom: 20 },
-  backArea: { height: 20 },
-  back: { position: 'absolute', left: 3, top: 0 },
   pageHeader: { alignItems: 'center', marginBottom: 20 },
   title: { ...bold, fontSize: 22, letterSpacing: -0.44, color: '#14142b', marginBottom: 8 },
   subtitle: { ...text, fontSize: 14, color: '#6d6f86' },

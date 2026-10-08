@@ -62,5 +62,14 @@ export const horizontal = { start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 } } as 
 export const vertical = { start: { x: 0.5, y: 0 }, end: { x: 0.5, y: 1 } } as const;
 export const diagonal = { start: { x: 0, y: 0 }, end: { x: 1, y: 1 } } as const;
 
+/** Imágenes del prototipo (mismos archivos de img/). */
+export const images = {
+  logo: require('@/img/MindTrack-Logo.png'),
+  chart: require('@/img/grafico.png'),
+};
+
+/** Proporción ancho/alto del logo (386×113 px). */
+export const LOGO_RATIO = 386 / 113;
+
 /** Ancho del diseño original (marco de teléfono de 390 px). */
 export const DESIGN_WIDTH = 390;
