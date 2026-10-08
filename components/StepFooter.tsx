@@ -17,14 +17,18 @@ type Props = {
   variant: 'stacked' | 'centered';
   /** Reporte 3 usaba Arial para el número de paso. */
   arialStep?: boolean;
+  /** Fondo de la franja del botón (en reporte 4–5 era el del contenido). */
+  backgroundColor?: string;
+  /** Incluir la barra inferior (en reporte 4–5 va fija fuera del contenido desplazable). */
+  withNav?: boolean;
 };
 
 /** Pie del registro diario: botón Continue/Finish, número de paso y barra inferior. */
-export function StepFooter({ step, href, label = 'Continue', variant, arialStep }: Props) {
+export function StepFooter({ step, href, label = 'Continue', variant, arialStep, backgroundColor, withNav = true }: Props) {
   const stacked = variant === 'stacked';
   return (
     <View>
-      <View style={stacked ? styles.stacked : styles.centered}>
+      <View style={[stacked ? styles.stacked : styles.centered, { backgroundColor }]}>
         <GradientButton
           label={label}
           onPress={() => router.navigate(href)}
@@ -42,7 +46,7 @@ export function StepFooter({ step, href, label = 'Continue', variant, arialStep 
           {step}
         </Text>
       </View>
-      <BottomNav />
+      {withNav && <BottomNav />}
       {stacked && <View style={styles.gap} />}
     </View>
   );
