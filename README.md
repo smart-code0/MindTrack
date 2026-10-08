@@ -23,7 +23,14 @@ Otros comandos:
 npm run typecheck   # comprobación de tipos de TypeScript
 npm run android     # abrir en un emulador Android
 npm run ios         # abrir en un simulador iOS (macOS)
+npm run build:web   # versión web en dist/ (la que publica Vercel)
 ```
+
+## Versión web (Vercel)
+
+Vercel publica una versión web de la app para verla desde el navegador.
+`vercel.json` le indica que ejecute `npm run build:web` y sirva la carpeta `dist/`.
+La aplicación principal sigue siendo la app móvil.
 
 ## Estructura
 
