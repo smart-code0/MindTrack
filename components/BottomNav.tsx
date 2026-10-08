@@ -15,11 +15,13 @@ const ITEMS: { href: Href; icon: IconName; label: string }[] = [
 type Props = {
   /** Índice del icono resaltado (solo "Nueva cita" lo marcaba en el original). */
   activeIndex?: number;
+  /** Destino del icono de calendario ("Nueva cita" enlazaba a sí misma). */
+  calendarHref?: Href;
   style?: StyleProp<ViewStyle>;
 };
 
 /** Barra de navegación inferior con los tres accesos principales (footer-nav.css). */
-export function BottomNav({ activeIndex, style }: Props) {
+export function BottomNav({ activeIndex, calendarHref, style }: Props) {
   const { bottom } = useSafeAreaInsets();
   return (
     <View style={[styles.nav, { height: 70 + bottom, paddingBottom: bottom }, style]}>
@@ -27,9 +29,9 @@ export function BottomNav({ activeIndex, style }: Props) {
         <Pressable
           key={item.label}
           style={styles.link}
-          onPress={() => router.navigate(item.href)}
-          accessibilityRole="link"
-          accessibilityLabel={item.label}
+          onPress={() => router.navigate(i === 2 && calendarHref ? calendarHref : item.href)}
+          role="link"
+          aria-label={item.label}
         >
           <Icon name={item.icon} size={28} color={i === activeIndex ? colors.navIconActive : colors.navIcon} />
         </Pressable>
