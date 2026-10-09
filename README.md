@@ -74,11 +74,16 @@ y día) y `pagos`.
 
 ### Aplicar el esquema
 
-En el **SQL Editor** del proyecto de Supabase, ejecutar en este orden:
+Las tres migraciones y `seed.sql` ya están aplicadas en el proyecto de Supabase
+**MindTrackDB**. Los nombres de los archivos llevan la misma versión que quedó
+registrada allí. Una migración aplicada no se edita: cada cambio nuevo va en un
+archivo nuevo dentro de `supabase/migrations/`.
 
-1. `supabase/migrations/20261009120000_tipos_y_tablas.sql`
-2. `supabase/migrations/20261009120100_funciones_y_triggers.sql`
-3. `supabase/migrations/20261009120200_seguridad_rls.sql`
+Para crear la base en otro proyecto, en el **SQL Editor** del proyecto de Supabase, ejecutar en este orden:
+
+1. `supabase/migrations/20261009131900_tipos_y_tablas.sql`
+2. `supabase/migrations/20261009131926_funciones_y_triggers.sql`
+3. `supabase/migrations/20261009132012_seguridad_rls.sql`
 4. `supabase/seed.sql`
 5. (Opcional) Crear en **Authentication → Users → Add user** las cuentas
    `admin@mindtrack.com`, `laura@mindtrack.com` y `juan@mindtrack.com`, y luego
